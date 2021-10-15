@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int flag=0;
+    int flag1=0;
+    char n1[50],n2[50];
+    printf("Enter first string: ");
+    gets(n1);
+    printf("Enter Second String: ");
+    gets(n2);
+    int a=strlen(n1);
+    int a2=strlen(n2);
+     for (int i = 0; i < (a-1); i++) 
+     {
+        for (int j=0;j<(a2-1);j++) 
+        {
+            if (n1[i]==n2[j]) {
+                flag=1;
+            }
+            if(n2[i]==n1[j])
+            {
+                flag1=1;
+            }
+            
+        }
+        if(flag==0)
+        {
+            printf("%c",n1[i]);
+        }
+        if(flag1==0)
+        {
+            printf("%c",n2[i]);
+        }
+        flag=0;
+        flag1=0;
+    }
+    
+}
